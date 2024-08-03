@@ -1,0 +1,33 @@
+#Matriz de adyacencia
+nosotros tenemos un grafo, y la manera de guardar esos grafos en un programa es mediante 2 maneras
+
+#La primera es matriz de adyacencia:
+Donde es una tabla que marca quienes estan conectados con uno y quienes no con cero
+
+#Otra es la lista de vertices y nodos
+Donde se ponen los nodos y despues los nodos que estan conectados
+
+#Ejemplo
+
+#conexiones : 
+1 --> 2, peso = 80
+2 --> 3, peso = 30
+3 --> 4, peso = 40
+3 --> 5, peso = 20
+
+#La matriz adyacente seria
+x = [[0,1,0,0,0], [1, 0, 0, 0, 0], [0, 1, 0, 1, 1], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0]]
+Con la tabla de filas x columnas es mas visual
+
+#El caso de la lista de vertices y nodos seria({1, 2, 3, 4, 5},[(1,2), (2,3), [3,4], [4,5]])
+// Se usa llave para que no se repita el nodo, ej= {1,1,2,3,4,5} ==> no se puede
+// lo  que esta en corchetes es la lista de vertices
+
+#Si queremos agregar pesos
+// en vez de poner 1 en la matriz, se pone el peso,
+// en vez de poner 2 numeros en la lista de vertices, se agrega uno mas que muestra el peso
+
+// El caso de la lista de vertices y nodos seria({1, 2, 3, 4, 5},[(1,2,80), (2,3,30), [3,4,40], [4,5,20]])
+//x = [[0,80,0,0,0], [80, 0, 0, 0, 0], [0, 30, 0, 40, 20], [0, 0, 40, 0, 0], [0, 0, 20, 0, 0]]
+
+#Camino minimo
