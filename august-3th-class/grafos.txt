@@ -31,3 +31,59 @@ Con la tabla de filas x columnas es mas visual
 //x = [[0,80,0,0,0], [80, 0, 0, 0, 0], [0, 30, 0, 40, 20], [0, 0, 40, 0, 0], [0, 0, 20, 0, 0]]
 
 #Camino minimo
+Se hace una lista que representa el camino minimo, dependiendo de los pesos
+#Siguiendo este ejemplo : 
+1 --> 2, peso = 80
+2 --> 3, peso = 30
+3 --> 4, peso = 40
+3 --> 5, peso = 20
+
+la lista seria:
+1 --> 2, peso = 80
+2 --> 3, peso = 30
+3 --> 5, peso = 20
+3 --> 4, peso = 40
+
+
+#Formas de recorrer un grafo
+
+BFS
+Verificar iamgen
+
+DFS
+Verificar iamgen
+
+#Ciclos
+Ejemplo
+
+// Alicia, el sombrereo y el conejo quieren pasar por un puente que soporta solo 2 personas.
+// uno solo puede llevar una linterna
+//Entonces la primera vuelta irian 2, luego volveria 1 y la segunda vuelta terminarian llegando los 3
+// Alicia tarda 10 min
+// sombrero tarda 12 min
+// conejo tarda 5 min
+
+En cuanto a grafos, arrancaria [a,s,c] = [0,0,0]
+
+Alicia y sombrero
+[1, 1, 0] = 12 min // alicia y sombrero pasan
+{
+    [0,1,0] = 10 min //Alicia busca al conejo
+    [1,1,1] = 5 min //alicia y conejo pasan segunda vuelta
+    Total tiempo = 27 min [alicia 2 viajes, sombrereo 1era vuelta, conejo 2da vuelta]
+}
+
+Alicia y conejo
+[1,0,1] = 10 min // alicia y conejo pasan
+{
+    [0,0,1] = 10 min // alicia busca a sombrerero
+    [1,1,1] = 12 min // alicia y sombrereo pasan
+    Total tiempo = 32 min [alicia 2 viajes, conejo 1era vuelta, sombrereo 2da vuelta]
+}
+{
+    [1,0,0] = 5 min // conejo busca al sombrerero
+    [1,1,1] = 12 min //conejo y sombrereo pasan
+    Total tiempo = 27 min
+}
+
+arista = cuanto tarda, seria la conexion

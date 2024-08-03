@@ -1,0 +1,61 @@
+Ejercicio 1
+//Dada la siguiente matriz de adyacencia, indicar si el grafo es conexo o no. Luego dar un  ́arbol
+generador.
+
+F/C  1   2   3   4   5
+
+1|   0   1   1   0   1   
+
+2|   1   0   1   0   0
+
+3|   1   1   0   1   1
+
+4|   0   0   1   0   1
+
+5|   1   0   1   1   0
+
+[(1,2), (1,3), (1,5)],
+[(2,1), (2,3)],
+[(3,1), (3,2), (3,4), (3,5)],
+[(4,3), (4,5)],
+[(5,1), (5,3), (5,4)]
+
+//Verificar carpeta imagenes ./img/ej1.jpeg
+
+Si es conexo, ya que, todos los nodos tienen al menos una conexion
+
+Dada la siguiente matriz de adyacencia, indicar si el grafo es conexo o no. Luego dar un  ́arbol
+generador.
+
+
+Ejercicio 2
+// Dado el siguiente grafo, dibujarlo y agregar la menor cantada de aristas posibles para hacerlo
+conexo. Cuantas se necesitan? Porque?
+// G =< {1, 2, 3, 4, 5, 6}, [(1.2),(4.5),(5, 5)] >
+
+Verificar ./imag/ej2.jpeg
+Quedaria G = < {1,2,3,4,5,6, [(1,4), (4,5), (5,5), (1,2), (2,3), (3,6)]}
+siendo [(1,4), (1,2), (2,3), (3,6)] Las que agregue
+
+Ejercicio 3, 8, 11 se entregan en el taller
+
+Ejercicio 3
+//Tenemos un robot que se puede mover por un campo. El mismo mide 10 metros por 10
+metros. El robot empieza en una esquina del campo y quiere ir a la esquina opuesta. Las
+ ́unicas restricciones que tiene es que solo puede moverse en vertical o en horizontal, un metro
+hacia adelante o atr ́as y adem ́as antes de llegar a su destino, debe buscar una pelota que esta
+en el medio del campo. El robot tarda 15 segundo en moverse un metro. Como armar un
+grafo que sirva para calcular cuanto tarda el robot en cumplir su objetivo.
+
+Ver ./img/ej3.jpeg
+Posicion inicial = [1,1]
+posicion necesaria(pelota) = [5,5]
+Posicion final = [10,10]
+
+#Algoritmo
+Se debe colocar primero las posiciones importantes y realizar una cuadrilla o matriz, y marcarlos con un punto. Luego sacamos:
+caminoMinimo([1,1],[5,5]) --> [[1,1], [1,2], [2,2]... [5,5]]
+caminoMinimo([5,5], [10,10]) --> [[5,5], [5,6], [5,7] ... [10,10]]
+Luego sumar cada arista * 15(segundos) y mostrar en pantalla
+
+
