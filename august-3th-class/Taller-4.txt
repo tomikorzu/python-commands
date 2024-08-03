@@ -59,3 +59,8 @@ caminoMinimo([5,5], [10,10]) --> [[5,5], [5,6], [5,7] ... [10,10]]
 Luego sumar cada arista * 15(segundos) y mostrar en pantalla
 
 
+Ejercicio 8
+// Un triangulo(en un grafo) es un conjunto de 3 nodos que estan conectas todos entre si. Dar
+una funcion que indique todos los triangulos que tiene un grafo que viene en forma de matriz
+de adjacencia.
+
